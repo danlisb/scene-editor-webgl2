@@ -1,0 +1,22 @@
+{
+  "models": [
+    { "id": "pistol",  "name": "Pistol",  "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/Pistol_01/FbxFiles/Pistol_01.obj",  "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/Pistol_01/Textures/Pistol_01_Albedo.png",  "merge": true },
+    { "id": "rifle",   "name": "Rifle",   "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/Rifle_01/Fbx_Files/Rifle_01.obj",   "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/Rifle_01/Textures/Rifle_01_Albedo.png",   "merge": true },
+    { "id": "shotgun", "name": "Shotgun", "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/Shotgun_01/FbxFiles/Shotgun_01.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/Shotgun_01/Textures/Shotgun_01_Albedo.png", "merge": true },
+    { "id": "smg",     "name": "SMG",     "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/SMG_01/Fbx_Files/SMG_01.obj",       "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/SMG_01/Textures/SMG_01_Albedo.png",       "merge": true },
+
+    { "id": "block_cube",    "name": "Cube",             "obj": "RetroWeaponPack_V1 Assets/BlockoutAssets/BasicBlockoutMeshes.obj", "objectName": "Blockout_Cube" },
+    { "id": "block_plane_c", "name": "Plane (centered)", "obj": "RetroWeaponPack_V1 Assets/BlockoutAssets/BasicBlockoutMeshes.obj", "objectName": "Blockout_Plane_Centered" },
+    { "id": "block_plane",   "name": "Plane",            "obj": "RetroWeaponPack_V1 Assets/BlockoutAssets/BasicBlockoutMeshes.obj", "objectName": "Blockout_Plane" },
+    { "id": "block_capsule", "name": "Capsule",          "obj": "RetroWeaponPack_V1 Assets/BlockoutAssets/BasicBlockoutMeshes.obj", "objectName": "Capsule" },
+
+    { "id": "proj_9mm_bullet",  "name": "Bala 9mm",         "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "9mm_Bullet_Mesh" },
+    { "id": "proj_9mm_shell",   "name": "Cápsula 9mm",      "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "9mm_Shell_Mesh" },
+    { "id": "proj_9mm_proj",    "name": "Projétil 9mm",     "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "9mm_Projectile_Mesh" },
+    { "id": "proj_556_bullet",  "name": "Bala 5.56mm",      "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "5.56mm_Bullet_Mesh" },
+    { "id": "proj_556_shell",   "name": "Cápsula 5.56mm",   "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "5.56mm_Shell_Mesh" },
+    { "id": "proj_556_proj",    "name": "Projétil 5.56mm",  "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "5.56mm_Projectile_Mesh" },
+    { "id": "proj_buck_proj",   "name": "Projétil Buckshot","obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "BuckShot_Projectile_Mesh" },
+    { "id": "proj_buck_shell",  "name": "Cápsula Buckshot", "obj": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/FbxFile/Projectiles.obj", "texture": "RetroWeaponPack_V1 Assets/RetroWeaponsPack/Guns/AdditionalMeshes/Projectiles/Texture/Projectiles_Albedo.png", "objectName": "BuckShot_Shell_Mesh" }
+  ]
+}

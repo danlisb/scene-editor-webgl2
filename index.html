@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editor de Cena — Trabalho CG</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Barra superior: botões de IO + título -->
+  <header id="topbar">
+    <div class="io-buttons">
+      <button id="btn-save">Salvar JSON</button>
+      <button id="btn-load">Carregar JSON</button>
+      <!-- Input file escondido — o botão "Carregar" dispara ele via click() -->
+      <input type="file" id="file-load" accept=".json" style="display:none" />
+    </div>
+    <h1>Trabalho 1 — Computação Gráfica</h1>
+  </header>
+
+  <!-- Painel esquerdo: menu de modelos com canvases-thumbnail -->
+  <aside id="model-menu">
+    <h2>Modelos</h2>
+    <div id="model-menu-list">
+      <!-- Preenchido pelo JS (model-menu.js) -->
+    </div>
+  </aside>
+
+  <!-- Canvas central — onde a cena é renderizada -->
+  <main id="canvas-container">
+    <canvas id="main-canvas"></canvas>
+  </main>
+
+  <!-- Painel direito: árvore + inspector -->
+  <aside id="right-panel">
+    <section id="scene-tree-section">
+      <h2>Cena</h2>
+      <div id="scene-tree">
+        <!-- Preenchido pelo JS (scene-tree.js) -->
+      </div>
+    </section>
+    <section id="inspector-section">
+      <h2>Inspector</h2>
+      <div id="inspector">
+        <!-- Preenchido pelo JS (inspector.js) -->
+      </div>
+    </section>
+  </aside>
+
+  <!-- Entry point — module pra suportar import/export -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

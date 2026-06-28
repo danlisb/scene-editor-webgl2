@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Claude Code (configuração local do editor de IA — não faz parte do projeto)
+.claude/

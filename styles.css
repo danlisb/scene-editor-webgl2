@@ -1,0 +1,60 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #1e1e1e;
+  color: #ddd;
+  overflow: hidden;
+}
+
+/* Layout principal: grid 3 colunas × 2 linhas
+   ┌────────────────────────────────────┐
+   │           topbar (linha 1)         │
+   ├──────────┬────────────┬────────────┤
+   │  menu    │  canvas    │  painel    │
+   │  esq.    │  central   │  direito   │
+   └──────────┴────────────┴────────────┘ */
+body {
+  display: grid;
+  grid-template-columns: 220px 1fr 300px;
+  grid-template-rows: 48px 1fr;
+  grid-template-areas:
+    "top top top"
+    "left main right";
+}
+
+#topbar       { grid-area: top;   display: flex; align-items: center;
+                gap: 16px; padding: 0 16px; background: #2a2a2a;
+                border-bottom: 1px solid #444; }
+#topbar h1    { font-size: 14px; font-weight: 500; color: #888; margin-left: auto; }
+.io-buttons   { display: flex; gap: 8px; }
+.io-buttons button { background: #3a3a3a; border: 1px solid #555; color: #eee;
+                     padding: 6px 12px; cursor: pointer; border-radius: 3px; }
+.io-buttons button:hover { background: #4a4a4a; }
+
+#model-menu    { grid-area: left;  background: #252525;
+                 border-right: 1px solid #444; overflow-y: auto; }
+#canvas-container { grid-area: main; position: relative; }
+#main-canvas   { display: block; width: 100%; height: 100%; cursor: grab; }
+#main-canvas:active { cursor: grabbing; }
+#right-panel   { grid-area: right; background: #252525;
+                 border-left: 1px solid #444; display: flex; flex-direction: column; }
+
+aside h2       { font-size: 13px; text-transform: uppercase; color: #888;
+                 padding: 10px 12px; border-bottom: 1px solid #3a3a3a; }
+
+#scene-tree-section { flex: 1; overflow-y: auto; border-bottom: 1px solid #444; }
+#inspector-section  { flex: 1; overflow-y: auto; }
+#scene-tree, #inspector { padding: 8px 12px; font-size: 12px; }
+
+/* Grid de thumbnails do menu de modelos */
+#model-menu-list { display: grid; grid-template-columns: 1fr 1fr;
+                   gap: 6px; padding: 8px; }
+.model-thumb { background: #1a1a1a; border: 1px solid #444; cursor: pointer;
+               border-radius: 3px; padding: 4px; text-align: center; }
+.model-thumb:hover { border-color: #888; }
+.model-thumb canvas { display: block; width: 90px; height: 90px;
+                      image-rendering: pixelated; margin: 0 auto; }
+.model-thumb .label { font-size: 10px; color: #aaa; margin-top: 2px; }

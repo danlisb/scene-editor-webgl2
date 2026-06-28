@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "camera": {
+    "target": [0, 0, 0],
+    "distance": 0.8,
+    "azimuth": 0.6,
+    "elevation": 0.4
+  },
+  "nodes": [
+    {
+      "id": "node_pistol_anim",
+      "name": "Pistola translando",
+      "modelId": "pistol",
+      "parentId": null,
+      "position": [-0.2, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "animDir": [0, 0, 0.1], "animSpeed": 0.3,
+      "animRotSpeed": [0, 0, 0],
+      "textureOverride": null, "textureFilter": "nearest", "tileU": 1, "tileV": 1
+    },
+    {
+      "id": "node_rifle_anim",
+      "name": "Rifle girando",
+      "modelId": "rifle",
+      "parentId": null,
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "animDir": [0, 0, 0], "animSpeed": 0,
+      "animRotSpeed": [0, 1.0, 0],
+      "textureOverride": null, "textureFilter": "nearest", "tileU": 1, "tileV": 1
+    },
+    {
+      "id": "node_smg_anim",
+      "name": "SMG girando em 3D",
+      "modelId": "smg",
+      "parentId": null,
+      "position": [0.2, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "animDir": [0, 0, 0], "animSpeed": 0,
+      "animRotSpeed": [0.5, 1.0, 0.3],
+      "textureOverride": null, "textureFilter": "nearest", "tileU": 1, "tileV": 1
+    }
+  ],
+  "selectedNodeId": null
+}

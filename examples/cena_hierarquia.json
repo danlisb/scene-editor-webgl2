@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "camera": {
+    "target": [0, 0, 0],
+    "distance": 0.6,
+    "azimuth": 0.5,
+    "elevation": 0.3
+  },
+  "nodes": [
+    {
+      "id": "node_rifle",
+      "name": "Rifle (pai)",
+      "modelId": "rifle",
+      "parentId": null,
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "animDir": [0, 0, 0], "animSpeed": 0,
+      "animRotSpeed": [0, 0.3, 0],
+      "textureOverride": null, "textureFilter": "nearest", "tileU": 1, "tileV": 1
+    },
+    {
+      "id": "node_cubo_filho",
+      "name": "Cubo (filho do rifle)",
+      "modelId": "block_cube",
+      "parentId": "node_rifle",
+      "position": [0, 0.1, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.05, 0.05, 0.05],
+      "animDir": [0, 0, 0], "animSpeed": 0, "animRotSpeed": [0, 0, 0],
+      "textureOverride": null, "textureFilter": "nearest", "tileU": 1, "tileV": 1
+    }
+  ],
+  "selectedNodeId": "node_rifle"
+}
