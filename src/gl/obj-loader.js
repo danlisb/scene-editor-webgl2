@@ -1,12 +1,8 @@
-// src/gl/obj-loader.js
-// Carregador de arquivos .obj (Wavefront). Adaptado do tutorial:
-//   https://webgl2fundamentals.org/webgl/lessons/webgl-load-obj-w-mtl.html
-//
-// Diferenças do tutorial:
-//   - Ignoramos o map_Kd do .mtl (paths que o Blender escreve são quebrados).
-//     A textura vem do models.json e é carregada à parte.
-//   - Suporta duas estratégias de leitura: merge (junta todos os 'o' blocks)
-//     ou objectName (carrega só um bloco específico).
+// Parser de .obj (Wavefront). Lê v/vn/vt/f, triangula n-gons por fan, devolve
+// BufferInfo pronto pro twgl. Suporta merge (junta todos os blocos 'o') ou
+// objectName (carrega só um bloco). Ignora .mtl — textura vem por fora via
+// models.json porque os paths que o Blender escreve no .mtl ficam quebrados.
+// Adaptado de https://webgl2fundamentals.org/webgl/lessons/webgl-load-obj-w-mtl.html
 
 import * as twgl from '../lib/twgl-full.module.js';
 

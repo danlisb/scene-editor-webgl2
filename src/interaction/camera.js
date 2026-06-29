@@ -1,14 +1,8 @@
-// src/interaction/camera.js
-// Câmera orbital. O usuário controla com mouse:
-//   - Clique esquerdo + arrastar -> rotaciona (azimute / elevação)
-//   - Scroll                     -> zoom (distance)
-//   - Clique direito + arrastar  -> pan (move target no plano de visão)
-//
-// Estado interno:
-//   target    [x,y,z] - ponto pra onde ela olha
-//   distance  number  - distância do target
-//   azimuth   number  - rotação horizontal em torno do target (rad)
-//   elevation number  - rotação vertical (rad), clamped pra não virar de cabeça pra baixo
+// Câmera orbital. Estado em coords esféricas: target + distance + azimuth +
+// elevation (rad). Mouse esquerdo rotaciona (az/elev), direito faz pan (move
+// target no plano de visão), scroll faz zoom (distance). Clique sem drag
+// dispara onClick — usado pelo picking. Elevation é clamped em ±84° pra
+// evitar o gimbal-lock do lookAt quando alinha com o vetor up.
 
 import { m4 } from '../lib/m4.js';
 

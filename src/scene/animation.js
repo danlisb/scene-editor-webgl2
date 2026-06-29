@@ -1,6 +1,5 @@
-// src/scene/animation.js
-// Lógica de animação contínua: avança position e rotation de cada nó
-// pelo delta time (dt em segundos).
+// Animação contínua: avança position e rotation de cada nó por dt (Euler
+// explícito). Chamado todo frame antes de scene.updateWorldMatrices().
 
 /**
  * Aplica animação a todos os nós da cena.

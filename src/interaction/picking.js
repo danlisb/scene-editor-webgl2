@@ -1,13 +1,7 @@
-// src/interaction/picking.js
-// Picking 3D via framebuffer offscreen com cores codificadas.
-//
-// Como funciona:
-//   1. Para cada SceneNode, o pickingId (uint32) é codificado nos 4 bytes RGBA.
-//   2. Renderizamos a cena num FBO usando o programa "picking" — cada nó pinta
-//      seus pixels com sua cor única (sem textura, sem luz, sem nada).
-//   3. Quando o usuário clica em (x,y), lemos o pixel do FBO naquela coord
-//      e decodificamos os 4 bytes de volta em uint32.
-//   4. Procuramos o SceneNode com aquele pickingId.
+// Picking 3D via FBO com cores codificadas: cada nó tem um pickingId uint32
+// codificado nos 4 bytes RGBA. Renderiza a cena num framebuffer offscreen
+// (invisível pro usuário) usando essas cores flat, lê 1 pixel onde o mouse
+// clicou via gl.readPixels e decodifica de volta no id pra achar o nó.
 
 import * as twgl from '../lib/twgl-full.module.js';
 

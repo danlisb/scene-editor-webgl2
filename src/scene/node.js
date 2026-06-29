@@ -1,9 +1,6 @@
-// src/scene/node.js
-// SceneNode — uma instância de um modelo dentro da cena.
-//
-// Cada nó referencia o modelo pelo modelId (não duplica buffers/texturas).
-// Tem transform local, propriedades de animação contínua, e overrides
-// opcionais de textura/filtro/tile.
+// SceneNode: instância de um modelo na cena. Referencia o modelo por modelId
+// (não duplica buffer/textura). Guarda transform local, animação contínua e
+// overrides opcionais de textura/filtro/tile.
 
 import { m4 } from '../lib/m4.js';
 

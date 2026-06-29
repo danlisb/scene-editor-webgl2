@@ -1,18 +1,11 @@
-// src/ui/model-menu.js
-// Painel esquerdo: lista de modelos disponíveis renderizados em 3D
-// (snapshot estático em <canvas> de 96×96 px por item).
+// Painel esquerdo: thumbnail 3D 96×96 por modelo do catálogo. Click adiciona
+// um SceneNode com aquele modelId à cena.
 //
-// Click no item -> adiciona um SceneNode com aquele modelId no centro da cena.
-//
-// IMPORTANTE — limite de contextos WebGL:
-//   Browsers permitem só ~16 contextos WebGL ativos por página. Se cada
-//   thumbnail tivesse o próprio contexto (16 modelos), somando o canvas
-//   principal estouraríamos o limite e o navegador descartaria o contexto
-//   "mais antigo" (o da cena), deixando a tela central branca.
-//   Solução: UM único contexto WebGL2 offscreen compartilhado renderiza todos
-//   os thumbnails, um de cada vez, e o resultado é copiado pra cada <canvas>
-//   visível via contexto "2d" (drawImage). Contextos 2d são baratos e não
-//   contam pro limite. Total de contextos WebGL: principal + offscreen = 2.
+// Browsers limitam ~16 contextos WebGL ativos por página. Pra não estourar
+// (16 thumbs + canvas principal = 17 -> evicta o mais antigo, tela central
+// fica branca), UM único contexto WebGL2 offscreen renderiza todos os
+// thumbnails e o resultado é copiado pra cada <canvas> visível via contexto
+// 2D (drawImage). Contextos 2D não contam pro limite. Total: principal + 1.
 
 import * as twgl from '../lib/twgl-full.module.js';
 import { m4 } from '../lib/m4.js';

@@ -1,8 +1,6 @@
-// src/ui/scene-tree.js
 // Painel direito-topo: árvore HTML refletindo scene.rootNodes recursivamente.
-// Click num item -> seleciona o nó. Botão × -> remove o nó.
-//
-// Reagimos aos eventos da cena (selectionChanged, structureChanged) re-renderizando.
+// Click seleciona o nó, × deleta. Re-renderiza inteiro a cada evento da Scene
+// (structureChanged, selectionChanged, nodeChanged).
 
 export class SceneTree {
   /**

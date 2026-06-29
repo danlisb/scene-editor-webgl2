@@ -1,11 +1,7 @@
-// src/scene/scene.js
-// Scene — contém a árvore de SceneNodes editada pelo usuário.
-//
-// Responsabilidades:
-//   - Manter os nós e a hierarquia parent->children.
-//   - Recalcular worldMatrix de cada nó (traversal recursivo).
-//   - Gerenciar qual nó está selecionado.
-//   - Disparar eventos quando algo muda (pra UI reagir).
+// Scene: árvore de SceneNodes + índice id->nó + seleção corrente. Recalcula
+// worldMatrix de cada nó por traversal recursivo (parent->children) e dispara
+// eventos (structureChanged, selectionChanged, nodeChanged) pra UI reagir
+// sem polling. Também faz a (de)serialização JSON da cena toda.
 
 import { m4 } from '../lib/m4.js';
 import { SceneNode } from './node.js';

@@ -1,9 +1,7 @@
-// src/ui/io-buttons.js
-// Conecta os botões "Salvar JSON" e "Carregar JSON" do topo.
-//
-// Salvar: monta um objeto { version, camera, ...scene.toJson() }, vira string,
-//         vira Blob, vira link de download. Tudo client-side.
-// Carregar: usa <input type=file> escondido pra abrir picker, lê via File.text().
+// Conecta os botões Salvar/Carregar JSON do topo.
+// Salvar: monta { version, camera, ...scene.toJson() } -> Blob -> link de
+// download temporário (tudo client-side).
+// Carregar: input[type=file] escondido -> File.text() -> scene.loadFromJson.
 
 export function setupIoButtons(scene, camera) {
   const btnSave = document.getElementById('btn-save');

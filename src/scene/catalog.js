@@ -1,7 +1,6 @@
-// src/scene/catalog.js
-// Catálogo de modelos — singleton que carrega TODOS os modelos do projeto UMA VEZ
-// e expõe acesso por modelId. Atende o requisito do enunciado:
-//   "o modelo só pode existir 1 vez na memória".
+// Catálogo de modelos: carrega todos os OBJs/texturas UMA VEZ na inicialização
+// e expõe por modelId. Atende o requisito do enunciado de que cada modelo só
+// existe 1 vez na memória — vários SceneNodes podem referenciar o mesmo id.
 
 import * as twgl from '../lib/twgl-full.module.js';
 import { loadObj } from '../gl/obj-loader.js';

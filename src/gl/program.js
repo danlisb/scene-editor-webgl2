@@ -1,10 +1,6 @@
-// src/gl/program.js
-// Wrappers em cima do twgl.js pra criar/usar programas shader.
-//
-// Por que existir esse arquivo se o twgl já faz quase tudo:
-//   - Centraliza a criação dos 2 programas (main e picking) num lugar.
-//   - Expõe uma API mais explícita pro resto do código.
-//   - Facilita trocar twgl por código manual depois, se quisermos.
+// Cria os 2 programas shader (main + picking) via twgl.createProgramInfo.
+// Wrapper fino só pra centralizar a criação num lugar e deixar main.js
+// pegar tudo via createPrograms(gl).
 
 import * as twgl from '../lib/twgl-full.module.js';
 import { MAIN_VS, MAIN_FS, PICK_VS, PICK_FS } from './shaders.js';

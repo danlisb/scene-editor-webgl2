@@ -1,7 +1,6 @@
-// src/main.js — entry point do editor.
-// Inicializa WebGL2, carrega o catálogo de modelos, monta os painéis de UI
-// (menu, árvore, inspector, IO) e roda o loop de render (animação +
-// atualização de matrizes mundo + desenho da cena).
+// Entry point: inicializa WebGL2, carrega o catálogo, monta os painéis
+// (menu/árvore/inspector/IO), conecta picking ao click do canvas e roda
+// o mainLoop (updateAnimations -> updateWorldMatrices -> drawScene).
 
 import * as twgl from './lib/twgl-full.module.js';
 import { m4 } from './lib/m4.js';

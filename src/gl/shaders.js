@@ -1,9 +1,6 @@
-// src/gl/shaders.js
-// Fontes GLSL dos programas de shader usados pelo editor.
-// Cada constante é uma string com o código GLSL.
-//
-// IMPORTANTE: a primeira linha precisa ser "#version 300 es" pra usar GLSL ES 3.00
-// (WebGL2). Não pode ter nada antes desse diretiva (nem comentário, nem espaço).
+// Fontes GLSL dos 2 programas: MAIN (textura + Lambert difuso + tile UV) e
+// PICK (cor flat = pickingId codificado em RGBA). GLSL ES 3.00 — a string
+// PRECISA começar com "#version 300 es", sem nada antes (nem comentário).
 
 // === Programa principal (render normal com textura + iluminação Lambert) ===
 

@@ -1,12 +1,7 @@
-// src/ui/inspector.js
-// Painel direito-baixo: edita o nó selecionado.
-//
-// Estratégia: quando seleção muda, reconstrói TODOS os campos do zero
-// (brute-force re-render). Cada <input> tem handler oninput que escreve
-// direto no nó — o render loop pega na próxima iteração.
-//
-// Rotação: armazenada em radianos no SceneNode, mas mostrada/editada
-// em graus na UI (mais intuitivo pro usuário).
+// Painel direito-baixo: edita o nó selecionado. Re-renderiza tudo do zero
+// quando a seleção muda (brute-force, simples e barato pra essa escala).
+// Cada <input> escreve direto no nó; o render loop pega na próxima iteração.
+// Rotação fica em rad no nó mas é mostrada/editada em graus na UI.
 
 const RAD_TO_DEG = 180 / Math.PI;
 const DEG_TO_RAD = Math.PI / 180;
