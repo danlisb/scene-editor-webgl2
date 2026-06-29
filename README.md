@@ -43,10 +43,6 @@ src/
 └── ui/                   # 4 painéis HTML
 ```
 
-## Testes automatizados
-
-Abrir `http://localhost:8000/test.html` — 4 testes cobrindo hierarquia, animação e JSON roundtrip.
-
 ## Assets
 
 Modelos do Retro Weapon Pack (licença livre, https://itch.io/), convertidos de FBX pra OBJ no Blender.
