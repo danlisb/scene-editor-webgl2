@@ -33,6 +33,11 @@ export class Catalog {
   async loadAll(gl, programInfoMain) {
     const catalog = await fetch('assets/models.json').then(r => r.json());
 
+    // Pré-popula o Map na ordem definida em models.json. Map.set em chave
+    // existente NÃO muda a posição, então mesmo que os carregamentos paralelos
+    // terminem fora de ordem, a iteração de list() permanece estável.
+    for (const def of catalog.models) this.models.set(def.id, null);
+
     // Carrega em paralelo pra ir mais rápido.
     await Promise.all(catalog.models.map(def => this._loadOne(gl, programInfoMain, def)));
   }
@@ -88,6 +93,7 @@ export class Catalog {
 
   /** Devolve um array com todos os modelos (pra iteração no menu). */
   list() {
-    return Array.from(this.models.values());
+    // Filtra placeholders null (modelos pré-registrados mas ainda carregando).
+    return Array.from(this.models.values()).filter(Boolean);
   }
 }
