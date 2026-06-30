@@ -3,3 +3,6 @@
 
 # Claude Code (configuração local do editor de IA — não faz parte do projeto)
 .claude/
+
+# Planejamento/specs do build (referência local, fora da entrega)
+docs/superpowers/

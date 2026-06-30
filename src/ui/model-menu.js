@@ -2,7 +2,7 @@
 // um SceneNode com aquele modelId à cena.
 //
 // Browsers limitam ~16 contextos WebGL ativos por página. Pra não estourar
-// (16 thumbs + canvas principal = 17 -> evicta o mais antigo, tela central
+// (16 thumbs + canvas principal = 17 -> evita o mais antigo, tela central
 // fica branca), UM único contexto WebGL2 offscreen renderiza todos os
 // thumbnails e o resultado é copiado pra cada <canvas> visível via contexto
 // 2D (drawImage). Contextos 2D não contam pro limite. Total: principal + 1.

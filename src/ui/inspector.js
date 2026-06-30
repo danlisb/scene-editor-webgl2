@@ -1,5 +1,5 @@
 // Painel direito-baixo: edita o nó selecionado. Re-renderiza tudo do zero
-// quando a seleção muda (brute-force, simples e barato pra essa escala).
+// quando a seleção muda.
 // Cada <input> escreve direto no nó; o render loop pega na próxima iteração.
 // Rotação fica em rad no nó mas é mostrada/editada em graus na UI.
 
